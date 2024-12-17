@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -78,17 +79,19 @@ WSGI_APPLICATION = 'camer_Job.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'camer_job',       
-        'USER': 'root',     
-        'PASSWORD': '', 
+        'USER': 'lea',     
+        'PASSWORD': 'prudence2006', 
         'HOST': 'localhost',              
-        'PORT': '3306',                
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
+        'PORT': '',                
+        #'OPTIONS': {
+         #   'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        #}
     }
+  
 }
+
 
 
 # Password validation
