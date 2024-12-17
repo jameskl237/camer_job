@@ -11,10 +11,19 @@ def index(request, *args, **kwargs):
     }
     return render(request, 'job/index.html', context)
 
+def home(request, *args, **kwargs):
+    tasks = Task.objects.all()
+    context = {
+        'tasks' : tasks
+    }
+    return render(request, 'job/home.html', context)
+
+def myJobs(request, *args, **kwargs):
+    return render(request, 'job/myJobs.html')
 
 class CreateJob(View):
     def get(self, request, *args, **kwargs):
-        return HttpResponse('GET request!')
+        return render(request, 'job/createJob.html')
 
     def post(self, request, *args, **kwargs):
         return HttpResponse('POST request!')
