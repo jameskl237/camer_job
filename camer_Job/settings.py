@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'job',                      #enregistrement de l'application (module) job
-    'user',                      #enregistrement de l'application (module) user
+    'django_seed',
+    'User',
 ]
 
 MIDDLEWARE = [
